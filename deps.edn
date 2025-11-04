@@ -8,7 +8,7 @@
  {:test  {:extra-paths ["test" "dev" "bin"]
           :extra-deps  {io.github.clojure/tools.build {:mvn/version "0.10.10"}
                         clj-commons/pomegranate       {:mvn/version "1.2.25"}}}
-  :build {:extra-paths ["dev"]
+  :build {:extra-paths ["bin"]
           :extra-deps  {io.github.clojure/tools.build {:mvn/version "0.10.10"}
                         clj-commons/pomegranate       {:mvn/version "1.2.25"}}
           :ns-default  build}
