@@ -9,7 +9,7 @@
 (def basis (b/create-basis {:project "deps.edn"}))
 (def src-dirs (:paths basis))
 (def lib (symbol group-name lib-name))
-(def version "1.8.596")
+(def version (slurp "VERSION"))
 (def class-dir "target/classes")
 (def jar-file (format "target/%s-%s.jar" lib-name version))
 (def deploy-config (delay {:coordinates       [lib version]
