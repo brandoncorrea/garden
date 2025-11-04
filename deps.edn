@@ -5,7 +5,13 @@
    :exclusions  [com.google.javascript/closure-compiler com.google.guava/guava]}}
 
  :aliases
- {:test {:extra-paths ["test" "dev" "bin"]}
+ {:test  {:extra-paths ["test" "dev" "bin"]
+          :extra-deps  {io.github.clojure/tools.build {:mvn/version "0.10.10"}
+                        clj-commons/pomegranate       {:mvn/version "1.2.25"}}}
+  :build {:extra-paths ["dev"]
+          :extra-deps  {io.github.clojure/tools.build {:mvn/version "0.10.10"}
+                        clj-commons/pomegranate       {:mvn/version "1.2.25"}}
+          :ns-default  build}
   :dev
   {:extra-paths ["test" "dev"]
    :extra-deps  {criterium/criterium {:mvn/version "0.4.6"}}}}}
